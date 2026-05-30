@@ -797,22 +797,24 @@ export default function App() {
                   ⏸ Pausar
                 </button>
                 <button onClick={resetTimer} className="btn-ghost" style={{ padding: "14px 24px" }}>
-                  ✕ Parar
+                  ⏹ Zerar
+                </button>
+              </>
+            ) : timerCurrentRound > 1 || (timerCurrentRound === 1 && timerSeconds !== timerWork) ? (
+              <>
+                <button onClick={() => setTimerRunning(true)} className="btn-primary"
+                  style={{ background: "#2A9D8F", color: "#000", padding: "14px 32px", fontSize: 15 }}>
+                  ▶ Continuar
+                </button>
+                <button onClick={resetTimer} className="btn-ghost" style={{ padding: "14px 24px" }}>
+                  ⏹ Zerar
                 </button>
               </>
             ) : (
-              <>
-                <button onClick={startTimer} className="btn-primary"
-                  style={{ background: accentColor, color: "#000", padding: "14px 48px", fontSize: 16, fontWeight: 800 }}>
-                  ▶ INICIAR
-                </button>
-                {timerSeconds !== timerWork && (
-                  <button onClick={() => setTimerRunning(true)} className="btn-primary"
-                    style={{ background: "#2A9D8F", color: "#000", padding: "14px 32px", fontSize: 15 }}>
-                    ▶ Continuar
-                  </button>
-                )}
-              </>
+              <button onClick={startTimer} className="btn-primary"
+                style={{ background: accentColor, color: "#000", padding: "14px 48px", fontSize: 16, fontWeight: 800 }}>
+                ▶ INICIAR
+              </button>
             )}
           </div>
         </div>
