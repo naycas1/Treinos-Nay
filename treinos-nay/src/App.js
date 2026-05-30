@@ -334,7 +334,7 @@ export default function App() {
             </div>
             <input ref={photoRef} type="file" accept="image/*" style={{ display: "none" }} onChange={handlePhoto} />
             <div>
-              <div style={{ fontFamily: "'Playfair Display', serif", fontSize: 22, fontWeight: 900, color: "#f0f0f0", lineHeight: 1.1 }}>Treinos da Nay</div>
+              <div style={{ fontFamily: "'Playfair Display', serif", fontSize: 22, fontWeight: 900, color: "#f0f0f0", lineHeight: 1.1 }}>N.FIT</div>
               <div style={{ fontSize: 11, color: "#444", fontStyle: "italic" }}>{new Date().toLocaleDateString("pt-BR", { weekday: "long", day: "numeric", month: "long" })}</div>
             </div>
           </div>
